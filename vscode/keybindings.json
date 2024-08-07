@@ -1,0 +1,60 @@
+[
+    {
+        "key": "ctrl+k ctrl+i",
+        "command": "settings.cycle",
+        "args": {
+            "id": "init",
+            "overrideWorkspaceSettings": false,
+            "values": [
+                {
+                    "breadcrumbs.enabled": false,
+                    "editor.fontFamily": "'JetBrainsMono Nerd Font', monospace",
+                    "editor.fontLigatures": true,
+                    "editor.formatOnSave": true,
+                    "editor.minimap.enabled": false,
+                    "terminal.integrated.fontSize": 15,
+                    "terminal.integrated.lineHeight": 1.5,
+                    "workbench.colorTheme": "Catppuccin Macchiato",
+                    "workbench.iconTheme": "catppuccin-macchiato",
+                    "workbench.startupEditor": "none"
+                }
+            ]
+        }
+    },
+    {
+        "key": "ctrl+k ctrl+z",
+        "command": "settings.cycle",
+        "args": {
+            "id": "zen",
+            "overrideWorkspaceSettings": false,
+            "values": [
+                {
+                    "editor.fontSize": 16,
+                    "editor.guides.indentation": false,
+                    "editor.lineHeight": 45,
+                    "window.commandCenter": false,
+                    "window.menuBarVisibility": "compact",
+                    "workbench.activityBar.location": "hidden",
+                    "workbench.editor.editorActionsLocation": "hidden",
+                    "workbench.editor.showTabs": "none",
+                    "workbench.layoutControl.enabled": false,
+                    "workbench.sideBar.location": "right",
+                    "workbench.statusBar.visible": false
+                },
+                {
+                    "editor.fontSize": 14,
+                    "editor.guides.indentation": true,
+                    "editor.lineHeight": 0,
+                    "window.commandCenter": false,
+                    "window.menuBarVisibility": "classic",
+                    "workbench.activityBar.location": "default",
+                    "workbench.editor.editorActionsLocation": "default",
+                    "workbench.editor.showTabs": "multiple",
+                    "workbench.layoutControl.enabled": false,
+                    "workbench.sideBar.location": "left",
+                    "workbench.statusBar.visible": true
+                }
+            ]
+        }
+    }
+]
