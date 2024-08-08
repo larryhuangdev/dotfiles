@@ -14,6 +14,7 @@
                     "editor.minimap.enabled": false,
                     "git.autofetch": true,
                     "terminal.integrated.cursorStyle": "line",
+                    "terminal.integrated.defaultLocation": "editor",
                     "terminal.integrated.fontSize": 15,
                     "terminal.integrated.lineHeight": 1.5,
                     "terminal.integrated.persistentSessionReviveProcess": "onExitAndWindowClose",
@@ -22,7 +23,7 @@
                     "workbench.colorTheme": "Catppuccin Macchiato",
                     "workbench.iconTheme": "catppuccin-macchiato",
                     "workbench.panel.opensMaximized": "always",
-                    "workbench.startupEditor": "none"
+                    "workbench.startupEditor": "terminal"
                 }
             ]
         }
@@ -66,21 +67,6 @@
     {
         "key": "ctrl+t",
         "command": "workbench.action.terminal.new",
-        "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
-    },
-    {
-        "key": "ctrl+w",
-        "command": "workbench.action.terminal.kill",
-        "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
-    },
-    {
-        "key": "ctrl+l",
-        "command": "workbench.action.terminal.focusNext",
-        "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
-    },
-    {
-        "key": "ctrl+h",
-        "command": "workbench.action.terminal.focusPrevious",
-        "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+        "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
     }
 ]
