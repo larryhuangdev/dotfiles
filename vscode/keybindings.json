@@ -12,10 +12,16 @@
                     "editor.fontLigatures": true,
                     "editor.formatOnSave": true,
                     "editor.minimap.enabled": false,
+                    "git.autofetch": true,
+                    "terminal.integrated.cursorStyle": "line",
                     "terminal.integrated.fontSize": 15,
                     "terminal.integrated.lineHeight": 1.5,
+                    "terminal.integrated.persistentSessionReviveProcess": "onExitAndWindowClose",
+                    "window.newWindowDimensions": "inherit",
+                    "window.restoreWindows": "none",
                     "workbench.colorTheme": "Catppuccin Macchiato",
                     "workbench.iconTheme": "catppuccin-macchiato",
+                    "workbench.panel.opensMaximized": "always",
                     "workbench.startupEditor": "none"
                 }
             ]
