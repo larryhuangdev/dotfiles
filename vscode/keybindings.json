@@ -66,12 +66,12 @@
     {
         "key": "ctrl+t",
         "command": "workbench.action.terminal.new",
-        "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+        "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
     },
     {
         "key": "ctrl+w",
         "command": "workbench.action.terminal.kill",
-        "when": "terminalHasBeenCreated || terminalIsOpen || terminalProcessSupported"
+        "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
     },
     {
         "key": "ctrl+l",
