@@ -1,8 +1,18 @@
 #Requires -RunAsAdministrator
 
-# Define variables
 $APPDATA = [System.Environment]::GetFolderPath('ApplicationData')
 $DOTDIR = Split-Path -Path (Get-Location).Path -Parent
+
+$configMap = @(
+    @{
+        Path = "$HOME\.gitconfig",
+        Target = "$DOTDIR\git\.gitconfig"
+    },
+    @{
+        Path = "$APPDATA\Code\User\keybindings.json",
+        Target = "$DOTDIR\vscode\keybindings.json"
+    }
+)
 
 # Function to set symbolic link
 function Set-Symlink {
@@ -19,9 +29,8 @@ function Set-Symlink {
             Remove-Item $Path
         }
         else {
-            # Get the current epoch timestamp
+            # Generate new name with epoch timestamp
             $epochTime = [int][double]::Parse((Get-Date -UFormat %s))
-            # Generate the new name with .old and epoch timestamp
             $newName = "$Path.old.$epochTime"
             # Rename the existing file or directory
             Write-Output "Conflict detected: $Path already exists. Renaming to $newName"
@@ -29,10 +38,10 @@ function Set-Symlink {
         }
     }
 
-    # Set the symbolic link
     New-Item -ItemType SymbolicLink -Path $Path -Target $Target
 }
 
 # Link configs
-Set-Symlink -Path "$APPDATA\Code\User\keybindings.json" -Target "$DOTDIR\vscode\keybindings.json"
-Set-Symlink -Path "$HOME\.gitconfig" -Target "$DOTDIR\git\.gitconfig"
+foreach ($config in $configMap) {
+    Set-Symlink -Path $config.Path -Target $config.Target
+}
