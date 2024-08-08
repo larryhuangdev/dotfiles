@@ -2,7 +2,7 @@
 
 # Define variables
 $APPDATA = [System.Environment]::GetFolderPath('ApplicationData')
-$DOTDIR = (Get-Location).Path
+$DOTDIR = Split-Path -Path (Get-Location).Path -Parent
 
 # Function to set symbolic link
 function Set-Symlink {
