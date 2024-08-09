@@ -8,7 +8,7 @@
 
 ```pwsh
 winget source update
-winget install --id Git.Git --exact --silent --accept-package-agreements --accept-source-agreements
+winget install --id Git.Git --exact
 ```
 
 ### Install core packages and update configs
