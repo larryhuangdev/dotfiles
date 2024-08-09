@@ -1,16 +1,21 @@
 #Requires -RunAsAdministrator
 
+$DOTDIR = Split-Path -Path $PSScriptRoot -Parent
 $APPDATA = [System.Environment]::GetFolderPath('ApplicationData')
-$DOTDIR = Split-Path -Path (Get-Location).Path -Parent
+$DOCUMENTS = [System.Environment]::GetFolderPath('MyDocuments')
 
 $configMap = @(
     @{
-        Path = "$HOME\.gitconfig",
+        Path = "$HOME\.gitconfig"
         Target = "$DOTDIR\git\.gitconfig"
     },
     @{
-        Path = "$APPDATA\Code\User\keybindings.json",
+        Path = "$APPDATA\Code\User\keybindings.json"
         Target = "$DOTDIR\vscode\keybindings.json"
+    },
+    @{
+        Path = "$DOCUMENTS\PowerShell\Microsoft.PowerShell_profile.ps1"
+        Target = "$DOTDIR\pwsh\Microsoft.PowerShell_profile.ps1"
     }
 )
 
