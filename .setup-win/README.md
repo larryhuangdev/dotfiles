@@ -8,7 +8,7 @@
 
 ```pwsh
 winget source update
-winget install --id Git.Git --exact
+winget install --exact --id Git.Git
 ```
 
 ### Install core packages and update configs
@@ -17,7 +17,13 @@ winget install --id Git.Git --exact
 git clone --depth 1 https://github.com/larryhuangdev/dotfiles.git
 cd dotfiles\.setup-win
 .\install.ps1
-.\update.ps1
+```
+
+Close current shell and open new with `Win+X I`
+
+```pwsh
+cd dotfiles\.setup-win
+gsudo .\update.ps1
 ```
 
 ### Install Nerd fonts

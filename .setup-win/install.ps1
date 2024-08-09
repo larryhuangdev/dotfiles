@@ -2,11 +2,11 @@ $packageIDs = @(
     "Microsoft.PowerShell",
     "Microsoft.VisualStudioCode",
     "Starship.Starship",
-    "Docker.DockerDesktop",
+    "gerardog.gsudo",
     "nepnep.neofetch-win"
 )
 
 foreach ($packageID in $packageIDs) {
     Write-Output "Installing $packageID..."
-    winget install --id $packageID --exact
+    winget install --exact --id $packageID
 }
